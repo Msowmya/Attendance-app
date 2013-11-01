@@ -40,7 +40,22 @@ describe "EmployeePages" , :type => :feature do
       it "should create a employee" do
         expect { click_button submit }.to change(Employee, :count).by(1)
       end
+      describe "after saving the employee" do
+        before { click_button submit }
+        let(:employee) { Employee.find_by(email: 'user@example.com') }
+
+        it { should have_link('Sign out') }
+        it { should have_content(employee.name) }
+
+      end
+      describe "followed by signout" do
+        before { click_link 'Sign out' }
+        it { should have_link('Sign in') }
+      end
+
     end
-  end
 
   end
+  end
+
+

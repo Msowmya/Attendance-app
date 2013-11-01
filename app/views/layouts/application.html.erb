@@ -21,6 +21,14 @@
         <li class="current_page_item"><a href="#">Homepage</a></li>
         <li><a href="#">About</a></li>
         <li><a href="#">Contact</a></li>
+          <% if signed_in? %>
+            <li><%= link_to "Users", '#' %></li>
+
+            <li><%= link_to "Sign out", signout_path, method: "delete" %> </li>
+
+        <% else %>
+            <li><%= link_to "Sign in", signin_path %></li>
+        <% end %>
 
       </ul>
     </div>

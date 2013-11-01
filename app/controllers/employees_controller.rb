@@ -9,6 +9,7 @@ class EmployeesController < ApplicationController
   def create
     @employee = Employee.new(employee_params)    # Not the final implementation!
     if @employee.save
+      sign_in @employee
       redirect_to @employee
     else
       render 'new'
