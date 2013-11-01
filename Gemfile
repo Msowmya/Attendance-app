@@ -45,7 +45,7 @@ group :test do
   gem 'guard-rspec'
   gem 'guard-spork'
   gem 'rb-fsevent', :require => false
-
+  gem 'factory_girl_rails', '4.2.1'
 end
 
 # Use ActiveModel has_secure_password
