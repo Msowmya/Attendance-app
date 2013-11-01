@@ -7,8 +7,92 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div id="wrapper">
+  <div id="wrapper-bgbtm">
+    <div id="header">
+      <div id="logo">
+        <h1><a href="#">Wood Working </a></h1>
+        <p>template design by <a href="http://www.freecsstemplates.org/" rel="nofollow">FreeCSSTemplates.org</a></p>
+      </div>
+    </div>
+    <!-- end #header -->
+    <div id="menu">
+      <ul>
+        <li class="current_page_item"><a href="#">Homepage</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
 
-<%= yield %>
+      </ul>
+    </div>
+    <!-- end #menu -->
+    <div id="page">
+      <div id="page-bgtop">
+        <div id="page-bgbtm">
+          <%= yield %>
+          <!-- end #content -->
+          <div id="sidebar">
+            <div id="search">
+              <h2>Search</h2>
+              <form method="get" action="">
+                <fieldset>
+                  <input type="text" name="s" id="search-text" size="15" value="enter keywords here..." />
+                  <input type="submit" id="search-submit" value="GO" />
+                </fieldset>
+              </form>
+            </div>
+            <ul>
+              <li>
+                <h2>Aliquam tempus</h2>
+                <p>Mauris vitae nisl nec metus placerat perdiet est. Phasellus dapibus semper consectetuer hendrerit.</p>
+              </li>
+              <li>
+                <h2>Categories</h2>
+                <ul>
+                  <li><a href="#">Aliquam libero</a></li>
+                  <li><a href="#">Consectetuer adipiscing elit</a></li>
+                  <li><a href="#">Metus aliquam pellentesque</a></li>
+                  <li><a href="#">Suspendisse iaculis mauris</a></li>
+                  <li><a href="#">Urnanet non molestie semper</a></li>
+                  <li><a href="#">Proin gravida orci porttitor</a></li>
+                </ul>
+              </li>
+              <li>
+                <h2>Blogroll</h2>
+                <ul>
+                  <li><a href="#">Aliquam libero</a></li>
+                  <li><a href="#">Consectetuer adipiscing elit</a></li>
+                  <li><a href="#">Metus aliquam pellentesque</a></li>
+                  <li><a href="#">Suspendisse iaculis mauris</a></li>
+                  <li><a href="#">Urnanet non molestie semper</a></li>
+                  <li><a href="#">Proin gravida orci porttitor</a></li>
+                </ul>
+              </li>
+              <li>
+                <h2>Archives</h2>
+                <ul>
+                  <li><a href="#">Aliquam libero</a></li>
+                  <li><a href="#">Consectetuer adipiscing elit</a></li>
+                  <li><a href="#">Metus aliquam pellentesque</a></li>
+                  <li><a href="#">Suspendisse iaculis mauris</a></li>
+                  <li><a href="#">Urnanet non molestie semper</a></li>
+                  <li><a href="#">Proin gravida orci porttitor</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <!-- end #sidebar -->
+          <div style="clear: both;">&nbsp;</div>
+        </div>
+      </div>
+    </div>
+    <!-- end #page -->
+    <div id="footer">
+      <p>Copyright (c) 2011 Sitename.com. All rights reserved. Design by <a href="http://www.freecsstemplates.org/" rel="nofollow">FreeCSSTemplates.org</a>.</p>
+    </div>
+    <!-- end #footer -->
+  </div>
+</div>
+
 
 </body>
 </html>
