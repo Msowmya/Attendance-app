@@ -8,6 +8,7 @@ gem "simple_calendar", "~> 0.1.9"
 
 # Use postgresql as the database for Active Record
 gem 'pg'
+gem 'rails_12factor', '0.0.2'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
