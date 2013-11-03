@@ -6,6 +6,7 @@ class SessionsController < ApplicationController
     employee = Employee.find_by(email: params[:session][:email].downcase)
     if employee && employee.authenticate(params[:session][:password])
       sign_in employee
+
       redirect_to employee
     else
       render 'new'
@@ -16,4 +17,6 @@ class SessionsController < ApplicationController
     sign_out
     redirect_to root_url
   end
+
+
 end

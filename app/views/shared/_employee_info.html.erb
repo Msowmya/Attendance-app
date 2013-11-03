@@ -1,0 +1,10 @@
+
+<h1>
+  <%= current_employee.name %>
+</h1>
+<span>
+  <%= link_to "view my profile", current_employee %>
+</span>
+<span>
+  <%= pluralize(current_employee.events.count, "event") %>
+</span>

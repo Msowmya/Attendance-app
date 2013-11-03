@@ -1,16 +1,18 @@
 class EmployeesController < ApplicationController
-  def show
-    @employee = Employee.find(params[:id])
-  end
+
   def new
     @employee = Employee.new
   end
-
+  def show
+    @employee = Employee.find(params[:id])
+    @events = @employee.events
+    @attendanc = Attendanc.where(employee_id:@employee.id)
+  end
   def create
-    @employee = Employee.new(employee_params)    # Not the final implementation!
+    @employee = Employee.new(employee_params)
     if @employee.save
       sign_in @employee
-      redirect_to @employee
+     redirect_to @employee
     else
       render 'new'
     end

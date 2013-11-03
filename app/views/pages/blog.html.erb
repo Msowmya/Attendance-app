@@ -1,2 +1,15 @@
+<% if signed_in? %>
+    <div class="row">
+      <aside class="span4">
+        <section>
+          <%= render 'shared/employee_info' %>
+        </section>
+        <section>
+          <%= render 'shared/event_form' %>
+        </section>
+      </aside>
+    </div>
+<% else %>
 <h1>welcome to our company</h1>
 <h1><%= link_to "signup now", signup_path %></h1>
+  <% end %>

@@ -14,6 +14,9 @@ Spork.prefork do
   require 'rspec/rails'
   require 'rspec/autorun'
   require 'capybara/rails'
+  require_relative 'auth_helper'
+  require_relative 'auth_request_helper'
+
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.
   Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
@@ -32,6 +35,8 @@ Spork.prefork do
     # config.mock_with :rr
 
     config.include Capybara::DSL
+    config.include AuthRequestHelper, :type => :request
+    config.include AuthHelper, :type => :controller
 
 
     # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures

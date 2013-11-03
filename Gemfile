@@ -3,6 +3,7 @@ ruby '2.0.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 gem 'bcrypt-ruby', '3.0.1'
+gem "simple_calendar", "~> 0.1.9"
 
 
 # Use postgresql as the database for Active Record

@@ -1,2 +1,18 @@
-<%= @employee.name %>, <%= @employee.email %>
+<h1><%= @employee.name %></h1>
+<% if @employee.events.any? %>
+    <table>
+      <tr>
+        <th>Event</th>
+        <th>Time</th>
+      </tr>
+      <td>
+        <%= render @events %>
+      </td>
+    </table>
+ <% end %>
+<%= link_to "create new Event", root_url %><br/>
+<%= calendar @attendacs, {:prev_text=>"prev", :next_text=>"next"} do |attendanc| %>
+    <div><%= link_to attendanc.employee.id %></div>
+<% end %>
+
 

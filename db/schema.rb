@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131101173638) do
+ActiveRecord::Schema.define(version: 20131103211447) do
+
+  create_table "attendancs", force: true do |t|
+    t.integer  "employee_id"
+    t.datetime "signin_time"
+    t.datetime "signout_time"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "attendancs", ["employee_id"], name: "index_attendancs_on_employee_id", using: :btree
 
   create_table "employees", force: true do |t|
     t.string   "name"
@@ -24,5 +34,22 @@ ActiveRecord::Schema.define(version: 20131101173638) do
 
   add_index "employees", ["email"], name: "index_employees_on_email", unique: true, using: :btree
   add_index "employees", ["remember_token"], name: "index_employees_on_remember_token", using: :btree
+
+  create_table "events", force: true do |t|
+    t.integer  "employee_id"
+    t.string   "event_name"
+    t.datetime "start_time"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "events", ["employee_id"], name: "index_events_on_employee_id", using: :btree
+
+  create_table "projects", force: true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

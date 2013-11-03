@@ -5,5 +5,9 @@ FactoryGirl.define do
     password "foobar"
     password_confirmation "foobar"
   end
+  factory :event do
+    event_name "Lorem ipsum"
+    employee
+  end
 end
 
