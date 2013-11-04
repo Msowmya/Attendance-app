@@ -11,8 +11,9 @@
     </table>
  <% end %>
 <%= link_to "create new Event", root_url %><br/>
-<%= calendar @attendacs, {:prev_text=>"prev", :next_text=>"next"} do |attendanc| %>
-    <div><%= link_to attendanc.employee.id %></div>
+<%= calendar @attendancs do |attendanc| %>
+<%= link_to attendance.employee_id, @attendance  %>
 <% end %>
+<%= link_to "attendance", attendanc_path %>
 
 
