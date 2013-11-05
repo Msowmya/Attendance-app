@@ -6,7 +6,7 @@ class EmployeesController < ApplicationController
   def show
     @employee = Employee.find(params[:id])
     @events = @employee.events
-    #@attendancs = @employee.where(employee_id:@employee.id)
+    # @attendancs = @employee.where(employee_id:@employee.id)
   end
   def create
     @employee = Employee.new(employee_params)
