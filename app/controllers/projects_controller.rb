@@ -8,10 +8,11 @@ class ProjectsController < ApplicationController
   def index
     @projects = Project.all
   end
+
   def create
     @project = Project.new(project_params)
     @project.save
-    redirect_to @project
+    redirect_to projects_path
   end
   def destroy
 

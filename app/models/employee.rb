@@ -1,4 +1,5 @@
 class Employee < ActiveRecord::Base
+  belongs_to :project
   has_many :events
   has_one :attendanc, foreign_key: "employee_id"
   before_save { self.email = email.downcase }

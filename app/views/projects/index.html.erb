@@ -2,14 +2,15 @@
   <tr>
     <th>Title</th>
   <th>Description</th>
+    <th></th>
   </tr>
 
     <% @projects.each do |project| %>
       <tr>
     <td><%= project.title %></td>
      <td><%= project.description %></td>
+        <td><%= link_to "Open Project", project %></td>
      </tr>
   <% end %>
 
 </table>
-<%= link_to "Back", supervisor_path %>

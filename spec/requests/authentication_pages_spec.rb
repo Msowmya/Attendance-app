@@ -28,6 +28,7 @@ describe "AuthenticationPages" do
       it { should have_content(employee.name) }
       it { should have_link('Sign out',    href: signout_path) }
       it { should_not have_link('Sign in', href: signin_path) }
+
       describe "after saving the employee" do
         before { click_button submit }
         let(:employee) { Employee.find_by(email: 'user@example.com') }
